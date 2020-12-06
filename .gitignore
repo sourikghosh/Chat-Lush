@@ -1,5 +1,4 @@
-# Node Dependencies
 node_modules
-
-# Logs
 debug.log
+app.json
+Procfile
