@@ -1,4 +1,5 @@
 node_modules
-debug.log
 app.json
+debug.log
 Procfile
+.env
