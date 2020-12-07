@@ -1,5 +1,5 @@
-# Node Dependencies
 node_modules
-
-# Logs
+app.json
 debug.log
+Procfile
+.env

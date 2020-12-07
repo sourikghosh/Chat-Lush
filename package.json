@@ -30,5 +30,7 @@
     "socket.io-redis": "^5.1.0",
     "winston": "^2.2.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
 }
