@@ -14,7 +14,7 @@ var ioServer = require('./app/socket')(app);
 var logger = require('./app/logger');
 
 // Set the port number
-var port = process.env.PORT || 3000;
+var port = process.env.PORT;
 
 // View engine setup
 app.set('views', path.join(__dirname, 'app/views'));
