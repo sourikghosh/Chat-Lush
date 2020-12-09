@@ -6,7 +6,7 @@ var logger = require('../logger');
 
 // Connect to the database
 // construct the database URI and encode username and password.
-const dbURI = config.db.URI;
+const dbURI = config.dbURI;
 Mongoose.connect(dbURI, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true

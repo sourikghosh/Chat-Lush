@@ -4,3 +4,4 @@ app.json
 debug.log
 app/config/config.json
 .env
+dump.rdb
