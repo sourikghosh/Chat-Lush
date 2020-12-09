@@ -4,7 +4,6 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-var bodyParser = require('body-parser');
 var flash = require('connect-flash');
 
 // Chat application components
@@ -22,8 +21,7 @@ app.set('views', path.join(__dirname, 'app/views'));
 app.set('view engine', 'ejs');
 
 // Middlewares
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
 app.use(express.static('public'));
 
 app.use(session);
