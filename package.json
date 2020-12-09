@@ -4,7 +4,8 @@
   "description": "A Real Time Chat Application built using Node.js, Express, Mongoose, Socket.io, Passport, & Redis.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "deploy":"npm ci"
   },
   "repository": {
     "url": "git+https://github.com/sourikghosh/Chat-Lush.git",
