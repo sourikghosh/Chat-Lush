@@ -1,8 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
+
+  <link rel="icon" href="img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   <title>Chat Lush</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -25,39 +31,45 @@
           <input type="password" name="password" placeholder="password" />
           <button type="submit">create</button>
           <p class="message">Already registered? <a href="#">Sign In</a></p>
-          <% if (errors != null && showRegisterForm != null && showRegisterForm === true) { %>
-          <% errors.forEach(function(err){ %>
-          <p class="message error"><%= err %></p>
-          <% }); %>
-          <% } %>
+          <% if (errors !=null && showRegisterForm !=null && showRegisterForm===true) { %>
+            <% errors.forEach(function(err){ %>
+              <p class="message error">
+                <%= err %>
+              </p>
+              <% }); %>
+                <% } %>
         </form>
         <form action="/login" class="login-form" method="post">
           <input type="text" name="username" placeholder="username" />
           <input type="password" name="password" placeholder="password" />
           <button type="submit">login</button>
           <p class="message">Not registered? <a href="#">Create an account</a></p>
-          <% if (errors != null && showRegisterForm == null) { %>
-          <% errors.forEach(function(err){ %>
-          <p class="message error"><%= err %></p>
-          <% }); %>
-          <% } if (success != null && showRegisterForm == null) { %>
-          <p class="message success"><%= success %></p>
-          <% } %>
+          <% if (errors !=null && showRegisterForm==null) { %>
+            <% errors.forEach(function(err){ %>
+              <p class="message error">
+                <%= err %>
+              </p>
+              <% }); %>
+                <% } if (success !=null && showRegisterForm==null) { %>
+                  <p class="message success">
+                    <%= success %>
+                  </p>
+                  <% } %>
         </form>
       </div>
     </div> <!-- end form -->
   </div> <!-- end login container -->
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-  <% if(showRegisterForm != null && showRegisterForm === true) { %>
-  <script>
-    $('.register-form').show(); $('.login-form, .social-buttons, .form-line').hide();
-  </script>
-  <% } %>
-  <script>
-    $('.message a').click(function () {
-      $('form, .social-buttons, .form-line').animate({ height: "toggle", opacity: "toggle" }, "slow");
-    });
-  </script>
+  <% if(showRegisterForm !=null && showRegisterForm===true) { %>
+    <script>
+      $('.register-form').show(); $('.login-form, .social-buttons, .form-line').hide();
+    </script>
+    <% } %>
+      <script>
+        $('.message a').click(function () {
+          $('form, .social-buttons, .form-line').animate({ height: "toggle", opacity: "toggle" }, "slow");
+        });
+      </script>
 </body>
 
 </html>
