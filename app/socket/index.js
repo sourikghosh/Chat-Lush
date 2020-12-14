@@ -117,7 +117,7 @@ var ioEvents = function(io) {
  */
 var init = function(app){
 
-	var server 	= require('http').Server(app);
+	var server 	= require('https').Server(app);
 	var io 		= require('socket.io')(server);
 
 	// Force Socket.io to ONLY use "websockets"; No Long Polling.
