@@ -2,7 +2,7 @@
 A Real Time Chat Application built using Node.js, Express, Mongoose, Socket.io, Passport, & Redis.
 
 ## Demo<a name="demo"></a>
-#### [Chat Lush](https://chat-lush.herokuapp.com/)
+#### [Chat Lush](http://chat-lush.herokuapp.com/)
 
 ## Features<a name="features"></a>
 + Uses Express as the application Framework.
