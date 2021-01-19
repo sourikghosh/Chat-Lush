@@ -15,37 +15,10 @@ A Real Time Chat Application built using Node.js, Express, Mongoose, Socket.io, 
 + Stores session in a [MongoDB](https://github.com/mongodb/mongo) using [connect-mongo](https://github.com/kcbanner/connect-mongo); a MongoDB-based session store.
 + Uses [Redis](https://github.com/antirez/redis) as an Adapter for [Socket.io](https://github.com/socketio/socket.io).
 
-## How It Works<a name="how-it-works"></a>
-### Setup Configurations<a name="configurations"></a>
-The configurations on production will be assigned from Environment Variables on Heroku, while the development configurations reside inside _app/config/config.json_ file.
 
 #### MongoDB & MongoDBAtlas
 You need to create a database on MongoDBAtlas, then create a database user, get the `MongoDB URI`, and assign it to `dbURI`.
 
-#### Facebook & Twitter
-You need to register a new application on both Facebook and Twitter to get your tokens by which users can grant access to your application, and login using their social accounts.
-
-##### Registering the app on Facebook
-1. Go to [Facebook Developers](https://developers.facebook.com/)
-2. Add new app, and fill the required information.
-3. Get your `App ID`, `App Secret`.
-4. Go to Add Product -> Facebook Login -> Valid OAuth redirect URIs
-5. Add Valid Callback URIs
-6. Go to App Review -> Make your application public.
-
-Now, you can assign the `App ID` to `facebookClientID`, and `App Secret` to `facebookClientSecret`.
-##### Registering the app on Twitter
-1. Go to [Twitter Apps](https://apps.twitter.com/)
-2. Create new app, and fill the required information.
-3. Add Website & Callback URL
-4. Get your `Consumer Key`, `Consumer Secret`.
-
-Now, you can assign the `Consumer Key` to `twitterConsumerKey`, and `Consumer Secret` to `twitterConsumerSecret`.
-
-##### The Callback URL
-- It can point back to your localhost; _[http://localhost:3000/auth/facebook/callback](http://localhost:3000/auth/facebook/callback)_
-
-- When deploy to Heroku, you will have something look like this; _[http://my-chat-app.herokuapp.com/auth/facebook/callback](http://my-chat-app.herokuapp.com/auth/facebook/callback)_
 
 #### Session
 The session needs a random string to make sure the session id in the browser is random. That random string is used to encrypt the session id in the browser, _Why?_ To prevent session id guessing.
